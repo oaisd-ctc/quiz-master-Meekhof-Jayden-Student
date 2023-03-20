@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 1
   m_EditorClassIdentifier: 
   question: How many buildables are in the map "tranzit"?
+  answers:
+  - 2
+  - 0
+  - 5
+  - 9
+  correctAnswerIndex: 0

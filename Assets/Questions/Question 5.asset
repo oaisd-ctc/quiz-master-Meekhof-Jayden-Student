@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 5
   m_EditorClassIdentifier: 
   question: Who were the first and second game directors of cod zombies?
+  answers:
+  - Jimmy Zielinski and Jason Blundell
+  - George Romeo and Kevin Drew
+  - Steve Blum and Nolan North
+  - Edward Richtofen and Takeo Masaki
+  correctAnswerIndex: 0

@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 4
   m_EditorClassIdentifier: 
   question: What is the first step of the Origins Easter Egg?
+  answers:
+  - skewer the winged beast
+  - survive the horde
+  - ascend from darkness
+  - secure the keys
+  correctAnswerIndex: 0
