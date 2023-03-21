@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467ba188e58c6ac4fbce66e31645bedd, type: 3}
   m_Name: Question 1
   m_EditorClassIdentifier: 
-  question: How many buildables are in the map "tranzit"?
+  question: How many buildables are in the map "Tranzit"?
   answers:
   - 2
   - 0
   - 5
   - 9
-  correctAnswerIndex: 0
+  correctAnswerIndex: 3
