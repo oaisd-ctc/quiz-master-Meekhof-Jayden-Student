@@ -23,10 +23,21 @@ public class Quiz2 : MonoBehaviour
    [SerializeField] Image timerImage;
    Timer timer;
 
+    [Header("Scoring")]
+    [SerializeField] TextMeshProUGUI scoreText;
+    ScoreKeeper scoreKeeper;
+
+     [Header("ProgressBar")]
+     [SerializeField] Slider progressBar;
+
+     public bool isComplete;
+
     void Start()
     {
         timer = FindObjectOfType<Timer>();
-        GetNextQuestion();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        progressBar.maxValue = questions.Count;
+        progressBar.value = 0;
         questionText.text = currentQuestion.GetQuestion();
 
         for(int i = 0; i < answerButtons.Length; i++)
@@ -58,6 +69,12 @@ public class Quiz2 : MonoBehaviour
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
+        scoreText.text = "Score:" + scoreKeeper.CalculateScore() + "%";
+
+        if(progressBar.value == progressBar.maxValue)
+        {
+            isComplete = true;
+        }
     }
 
     void DisplayAnswer(int index)
@@ -69,6 +86,7 @@ public class Quiz2 : MonoBehaviour
             questionText.text = "Correct!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
+            scoreKeeper.IncrementCorrectAnswers();
         }
         else
         {
@@ -82,10 +100,15 @@ public class Quiz2 : MonoBehaviour
 
     void GetNextQuestion()
     {
+        if(questions.Count > 0)
+        {
         SetButtonState(true);
         SetDefaultButtonSprites();
         GetRandomQuestion();
         DisplayQuestion();
+        progressBar.value++;
+        scoreKeeper.IncrementQuestionsSeen();
+        }
     }
 
     void GetRandomQuestion()

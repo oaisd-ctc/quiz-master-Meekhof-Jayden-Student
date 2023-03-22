@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 467ba188e58c6ac4fbce66e31645bedd, type: 3}
+  m_Script: {fileID: 11500000, guid: e5bfc754af185cf4db7de3a56830ae54, type: 3}
   m_Name: Question 3
   m_EditorClassIdentifier: 
-  question: What is the Jumpscare in the map "Classified"?
+  question: What is the jumpscare on the map "Classified"?
   answers:
-  - shadowman
-  - last gen richtofen
-  - nova crawler
-  - T.E.D.D.
-  correctAnswerIndex: 1
+  - The Shadowman
+  - A Margwa
+  - Last Gen Richtofen
+  - A Nova Crawler
+  correctAnswerIndex: 2
